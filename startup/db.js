@@ -1,13 +1,13 @@
-// const winston = require('winston');
 const mongoose = require('mongoose');
 
-module.exports = function(){
-  const db = 'mongodb://localhost/api-movies';
-  mongoose
-  .connect(db)
-  .then(() => console.log('Connected to MongoDB...'))
-  // .then(() => winston.info(`Connected to ${db}...`));
+const MONGO_HOST = process.env.MONGO_HOST;
+const MONGO_SCHEMA = process.env.MONGO_SCHEMA;
 
-  // Comentamos esto porque ya no necesitamos esta forma para agarrar el error, ya lo estamos haciendo con winston
-  .catch((err) => console.error('Could not connect to MongoDB...'));
-}
+module.exports = function () {
+  // const db = 'mongodb://localhost/api-movies';
+  const db = 'mongodb://' + MONGO_HOST + '/' + MONGO_SCHEMA;
+  mongoose
+    .connect(db)
+    .then(() => console.log('Connected to MongoDB...'))
+    .catch((err) => console.error('Could not connect to MongoDB...'));
+};
