@@ -1,8 +1,8 @@
 const express = require('express');
-const genres = require('./genre');
+const genres = require('./genres');
+const authors = require('./authors');
 const movies = require('./movies');
 const home = require('./home');
-// const error = require('../middleware/error');
 
 module.exports = function(app){
   app.use(express.json());
@@ -10,6 +10,6 @@ module.exports = function(app){
 
   app.use('/', home);
   app.use('/api/genres', genres);
+  app.use('/api/authors', authors);
   app.use('/api/movies', movies);
-  // app.use(error);
 }
