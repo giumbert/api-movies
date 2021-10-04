@@ -2,8 +2,6 @@
 
 Es una api para guardar datos de películas.
 
-La misma levanta en `http://localhost`, por el puerto configurado en el archivo`.env`.
-
 ## Instalación
 
 Se creó utilizando lo siguiente instalado de manera global:
@@ -19,12 +17,15 @@ MONGO_HOST=localhost
 MONGO_SCHEMA=api-movies
 ```
 
-Una vez clonado, abrir una terminal y ubicarse dentro del proyecto
+Luego abrir una terminal y ubicarse dentro del proyecto
 ```sh
 cd api-movies
 npm i
 npm start
 ```
+
+La misma levanta en `http://localhost`, por el puerto configurado en el archivo`.env`.
+- `http://localhost:3000`
 
 La API se divide en 3 principales endpoints
 - Género: `/api/genres`
