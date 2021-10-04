@@ -110,3 +110,5 @@ Para cada uno se utilizan los siguientes métodos GET, POST, PUT y DELETE.
   - DELETE: elimina la película
     - `/api/movies/[ID del película a eliminar]`
     - Devuelve `json` con el película eliminado
+
+##### Se utilizó Postman para realizar las pruebas a los endpoints
